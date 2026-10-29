@@ -1,5 +1,8 @@
 # AgentTab × x402: pay-per-call stablecoin rails for AI agents on Celo
 
+[![AgentTab on Celo / Open Rails](https://img.shields.io/badge/AgentTab%20on%20Celo-Open%20Rails-35D07F)](https://www.loops.house/agents-on-open-rails)
+[![Submission](https://img.shields.io/badge/submission-SUBMISSION.md-555555)](SUBMISSION.md)
+
 > Built for the Celo **Agents on Open Rails** hackathon (Track 2 · USA₮ with x402). The code is chain-agnostic and also runs on Base.
 
 **Live demo (static replay of the real mainnet run):** https://htmlpreview.github.io/?https://github.com/zwang1111/agenttab-celo/blob/main/docs/index.html · **Demo video:** [docs/demo.mp4](docs/demo.mp4) (3.5 min, rendered by `scripts/render-video.py`) · **ERC-8004 registration file:** [docs/agent.json](docs/agent.json)
