@@ -2,7 +2,7 @@
 
 > Built for the Celo **Agents on Open Rails** hackathon (Track 2 · USA₮ with x402). The code is chain-agnostic and also runs on Base.
 
-**Live demo (static replay of the real mainnet run):** https://htmlpreview.github.io/?https://github.com/zwang1111/agenttab-celo/blob/main/docs/index.html (GitHub Pages at https://zwang1111.github.io/agenttab-celo/ once Pages is enabled: Settings → Pages → main, /docs) · **Demo video:** [docs/demo.mp4](docs/demo.mp4) (3.5 min, rendered by `scripts/render-video.py`) · **ERC-8004 registration file:** [docs/agent.json](docs/agent.json)
+**Live demo (static replay of the real mainnet run):** https://htmlpreview.github.io/?https://github.com/zwang1111/agenttab-celo/blob/main/docs/index.html · **Demo video:** [docs/demo.mp4](docs/demo.mp4) (3.5 min, rendered by `scripts/render-video.py`) · **ERC-8004 registration file:** [docs/agent.json](docs/agent.json)
 
 AI agents can't sign up for subscriptions or manage API keys, but they can pay. This repo is a pay-per-call **FX-quote API (USD/BRL)** that agents pay for in stablecoins on **two rails**:
 
@@ -32,12 +32,17 @@ agent ──GET──▶ provider ──402 (price, rails)──▶ agent
 | `scripts/` | Demo and deploy scripts, plus env examples for Celo mainnet and Base Sepolia |
 
 ## Quick start
+
+This path needs no API keys, funded wallets, or RPC secrets. Install [Foundry](https://book.getfoundry.sh/) and Node.js, then:
+
 ```bash
-git clone --recursive <repo> && cd celo-agent
+git clone --recursive https://github.com/zwang1111/agenttab-celo.git && cd agenttab-celo
 forge test                         # 5 tests
-cd agent && npm i && cd ..
-scripts/local-demo.sh              # anvil + local facilitator; open http://127.0.0.1:8402 and click "Run agent"
+cd agent && npm i && npm run build && cd ..
+scripts/local-demo.sh              # anvil + local facilitator; uses anvil's public dev mnemonic
 ```
+
+Open http://127.0.0.1:8402 and click **Run agent**. Testnet and mainnet scripts are separate: they read gitignored wallets and an x402 API key (see below).
 
 ## Celo Sepolia with the official facilitator
 `scripts/testnet-official.sh` uses `https://api.x402.sepolia.celo.org`. Put your facilitator API key in `.x402-key` (gitignored). The script expects wallets in `.throwaway-wallet.json` (payer) and `.throwaway-wallet-2.json` (payee), also gitignored. The testnet facilitator supports **USDC only** (`0x01C5C0122039549AD1493B8220cABEdD739BC44E`); get it from https://faucet.circle.com.
