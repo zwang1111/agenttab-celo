@@ -38,10 +38,10 @@ S = [
    "The provider answers 402 with both rails. One-off calls go through Celo's facilitator; repeat flow uses an escrow channel settled in batches."), 26),
  (slide("04", "Contracts: forge test", forge, "AgentTab.sol: batched settle, bad-signature and stale-voucher rejection, refund after expiry, top-up, and EIP-3009 replay protection. All 5 tests pass.", code=True, bg=(12, 12, 16)), 18),
  (slide("05", "Real Celo mainnet run (2026-10-15)", runlog, "Recorded mainnet run: a 402 challenge, three x402 settlements through the official facilitator, a channel open, five vouchers, and one batched settle.", code=True, bg=(12, 12, 16)), 30),
- (shot("06", "video-build/page-top.png", "Live replay page on GitHub Pages: every step links to the real transaction on Celoscan. x402 calls are gasless for the buying agent."), 18),
+ (shot("06", "video-build/page-top.png", "Live replay page: every step links to the real transaction on Celoscan. x402 calls are gasless for the buying agent."), 18),
  (shot("07", "video-build/page-bottom.png", "AgentTab rail: five off-chain vouchers (cumulative 0.01 → 0.05), then the provider settles all five in one onchain transaction."), 20),
  (slide("08", "Attribution tags (ERC-8021)", attr, "Every wallet client is extended with withAttribution(code). Local check: approve, open and settle txs all decode to our code; x402 settlements are credited via the PayTo address.", code=True, bg=(12, 12, 16)), 18),
- (slide("09", "Why USA₮, and honest status", ["• USA₮: US-regulated dollar, EIP-3009 gasless payer, claimable with Self", "• Repeat flow → AgentTab channel: cheap, refundable, non-custodial", "• Recorded mainnet proof settled in USD₮; USA₮ run is wired", "  (scripts/mainnet-usat.sh) and pending", "• Next: USA₮ run, ERC-8004 registration, wBRL/wARS routes, Textile FX", "", "github.com/zwang1111/agenttab-celo  ·  zwang1111.github.io/agenttab-celo"],
+ (slide("09", "Why USA₮, and honest status", ["• USA₮: US-regulated dollar, EIP-3009 gasless payer, claimable with Self", "• Repeat flow → AgentTab channel: cheap, refundable, non-custodial", "• Recorded mainnet proof settled in USD₮; USA₮ run is wired", "  (scripts/mainnet-usat.sh) and pending", "• Next: USA₮ run, ERC-8004 registration, wBRL/wARS routes, Textile FX", "", "github.com/zwang1111/agenttab-celo"],
    "Status: mainnet proof uses USD₮ today; the USA₮ run, ERC-8004 registration and independent users are the next steps."), 22),
 ]
 with open(f"{D}/list.txt", "w") as f:

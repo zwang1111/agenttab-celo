@@ -59,7 +59,7 @@
 6. The provider batch-settles the 5 vouchers in **one** onchain tx. The page's event log shows every step.
 7. Show the same flow on mainnet: open the Celoscan links above, then run `scripts/mainnet-official.sh` (needs funded gitignored wallets and an x402 API key).
 
-**Repo:** https://github.com/zwang1111/agenttab-celo · **Demo video:** https://github.com/zwang1111/agenttab-celo/blob/main/docs/demo.mp4 (upload to YouTube or Loom if the form wants a streaming link) · **Live demo:** https://htmlpreview.github.io/?https://github.com/zwang1111/agenttab-celo/blob/main/docs/index.html (or https://zwang1111.github.io/agenttab-celo/ once Pages is enabled) (static replay of the mainnet run; the interactive version is `scripts/local-demo.sh`) · **Team:** `<name / X / GitHub, to be filled in by the entrant>`
+**Repo:** https://github.com/zwang1111/agenttab-celo · **Demo video:** https://github.com/zwang1111/agenttab-celo/blob/main/docs/demo.mp4 (upload to YouTube or Loom if the form wants a streaming link) · **Live demo:** https://htmlpreview.github.io/?https://github.com/zwang1111/agenttab-celo/blob/main/docs/index.html (static replay of the mainnet run; the interactive version is `scripts/local-demo.sh`, no secrets) · **Team:** `<name / X / GitHub, to be filled in by the entrant>`
 
 **Attribution / identity**
 - ERC-8021 tag: official Loops House enrollment tag **`celo_f4012694135b`** is appended to every AgentTab tx via `withAttribution` (BUILDERS.md). Scoring run (2026-10-17) verified on-chain; an earlier same-day run used the guessed `celo_58c4cb758f93` and does not count.
